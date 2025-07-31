@@ -1,0 +1,16 @@
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(204, 204, 231);
+    height: 50px;
+    border: 2px solid black;
+}
+
+.no{
+    display: flex;
+    text-align: center;
+    font-size: 40px;
+    justify-content: center;
+    padding-top: 100px;
+}
