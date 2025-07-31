@@ -27,6 +27,10 @@ const Home = () => {
   return (
    <div>
       <Navbar/>
+      <audio autoPlay loop>
+        <source src="C:/Users/USER/Downloads/gta_iv_theme.mp3" type="audio/mpeg"  />
+        
+      </audio>
      <div className="container">
 
       {productData.map((elem, index) => {
