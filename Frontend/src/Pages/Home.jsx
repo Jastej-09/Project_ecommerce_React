@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import music from "../assets/gta_iv_theme";
 
 
 const Home = () => {
@@ -28,7 +29,7 @@ const Home = () => {
    <div>
       <Navbar/>
       <audio autoPlay loop>
-        <source src="C:/Users/USER/Downloads/gta_iv_theme.mp3" type="audio/mpeg"  />
+        <source src={music} type="audio/mpeg"  />
         
       </audio>
      <div className="container">
