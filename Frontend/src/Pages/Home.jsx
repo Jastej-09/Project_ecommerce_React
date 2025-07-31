@@ -28,10 +28,15 @@ const Home = () => {
   return (
    <div>
       <Navbar/>
-      <audio autoPlay loop>
+
+      <audio autoPlay loop controls>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+</audio>
+
+      {/* <audio autoPlay loop>
         <source src={music} type="audio/mpeg"  />
         
-      </audio>
+      </audio> */}
      <div className="container">
 
       {productData.map((elem, index) => {
