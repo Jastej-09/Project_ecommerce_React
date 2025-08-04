@@ -46,13 +46,11 @@ router.post("/register",upload.none(),async (req, res)=>{
 
 
 router.post("/login",upload.none(), async (req, res)=>{
-    const {username,email , password} = req.body
+    const {email , password} = req.body
 
     try {
 
-        if(!username){
-            return res.status(400).json({message : "username is required"})
-        }
+       
         if(!email){
             return res.status(400).json({message : "email is required"})
         }
