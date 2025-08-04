@@ -3,6 +3,7 @@ const productRouter = require("./routes/product.router")
 const indexRouter = require("./routes/index.router")
 const userRouter = require("./routes/user.router")
 const cartRouter = require("./routes/Cart.router")
+const storeRouter = require("./routes/store.router")
 const app = express()
 const path = require("path")
 const morgon = require("morgan")
@@ -24,6 +25,9 @@ app.use("/", indexRouter)
 app.use("/users", userRouter)
 app.use("/cart",cartRouter)
 app.use("/products",productRouter)
+app.use("/store",storeRouter)
+app.use("/users2", userRouter)
+app.use("/admin/login", userRouter)
 
 
 module.exports = app

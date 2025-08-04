@@ -1,10 +1,13 @@
 const express = require("express")
 const bcrypt = require("bcrypt")
 const userModel = require("../models/user.model")
+const multer = require("multer");
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
 
 const router = express.Router()
 
-router.post("/register",async (req, res)=>{
+router.post("/register",upload.none(),async (req, res)=>{
 
     const {username , email , password} = req.body
 
@@ -29,7 +32,7 @@ router.post("/register",async (req, res)=>{
             password : hashedPass
         })
 
-
+        console.log(username, email, password);
         await user.save()
         
         res.send("register successfully....")
@@ -42,12 +45,14 @@ router.post("/register",async (req, res)=>{
 })
 
 
-router.post("/login", async (req, res)=>{
-    const {email , password} = req.body
+router.post("/login",upload.none(), async (req, res)=>{
+    const {username,email , password} = req.body
 
     try {
 
-
+        if(!username){
+            return res.status(400).json({message : "username is required"})
+        }
         if(!email){
             return res.status(400).json({message : "email is required"})
         }

@@ -1,0 +1,91 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+
+
+
+html, body{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    /* background-color: #e0e0e0; */
+}
+
+.topp{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color:#d8c3a5;
+    color: #e0e0e0;
+    justify-content: space-between;
+}
+
+
+.linkk{
+       font-family: 'Cinzel', serif;
+       padding: 25px 0px;
+       padding-left: 20px;
+       color: #e63946;
+       cursor: pointer;
+    }
+
+
+
+.rightt{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: relative;
+    /* padding: 25px 0px;
+    padding-right: 20px; */
+}
+.storee{
+    padding-right: 10px;
+}
+.aboutt{
+    padding-right: 10px;
+}
+.loginn{
+    padding-right: 10px;
+}
+
+.bodyy{
+    background-image: url(https://ik.imagekit.io/jastej/Katsushika-Hokusai-The-Wave-courtesy-of-images.metmuseum.org_-1.webp?updatedAt=1754205324065);
+    background-size: cover;   
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 89vh;
+    width: 100%;
+    background-color: #f3eee3;
+}
+.hero-text {
+  position: absolute;
+  font-family: 'Cinzel', serif;
+  top: 100px;
+  right: 10px;
+  max-width: 600px;
+  color: #2f2f2f;
+  padding: 20px;
+  border-left: 4px solid #c44536;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.explore-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #c44536;
+  color: #fdfaf5;
+  font-family: 'Cinzel', serif;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: #a73328;
+}
+

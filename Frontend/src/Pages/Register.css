@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+    font-family: 'Cinzel', serif;
+    color: #4b2e2e;
+}
+
+.top {
+    background-color: #ffcad4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.left .link,
+.right .link {
+    cursor: pointer;
+    color: #4b2e2e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #a83260;
+}
+
+.right {
+    display: flex;
+    gap: 20px;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+    background-image: url('https://ik.imagekit.io/jastej/cherry-blossom-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 0;
+}
+
+.page {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    z-index: 1;
+    max-width: 400px;
+    width: 90%;
+}
+
+.page form {
+    display: flex;
+    flex-direction: column;
+    border: none; 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+
+
+
+.formgroupp {
+    margin-bottom: 20px;
+}
+
+.formgroupp label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dcb5b5;
+    border-radius: 8px;
+    background-color: #fffafc;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #e295b5;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #d1799b;
+}
+
+.extra-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.secondary-btn {
+  background-color: #f9d9e2;
+  color: #4b2e2e;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background-color: #f3c0d4;
+}

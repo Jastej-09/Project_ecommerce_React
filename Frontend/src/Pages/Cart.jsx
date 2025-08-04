@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import "./Cart.css"
+import "./cart.css";
 
 const Cart = () => {
   const [cart, setCart] = useState([]);
@@ -33,20 +33,14 @@ const Cart = () => {
     return Array.from(map.values());
   };
 
-//   const handleAddToCart = () => {
-//     axios.post(`http://localhost:3000/cart/add/${productId}`)
-//       .then(response => alert('Product added to cart!'))
-//       .catch(error => console.error('Error adding to cart:', error));
-//   };
-
   const reduceQuantity = (productId) => {
-    axios.delete(`https://project-ecommerce-react.onrender.com/cart/reduce/${productId}`)
+    axios.delete(`http://localhost:3000/cart/reduce/${productId}`)
       .then(() => fetchCart())
       .catch((err) => console.error('Error reducing quantity:', err));
   };
 
   const deleteProduct = (productId) => {
-    axios.delete(`https://project-ecommerce-react.onrender.com/cart/delete/${productId}`)
+    axios.delete(`http://localhost:3000/cart/delete/${productId}`)
       .then(() => fetchCart())
       .catch((err) => console.error('Error deleting product:', err));
   };
@@ -60,21 +54,20 @@ const Cart = () => {
       {cart.length === 0 ? (
         <div className="no"><p>No items in cart</p></div>
       ) : (
-        <div style={styles.cardContainer}>
+        <div className="cart-container">
           {cart.map((item) => (
-            <div key={item._id} style={styles.card}>
+            <div key={item._id} className="cart-card">
               <img
                 src={item.image}
                 alt={item.title}
-                style={styles.image}
               />
               <h3>{item.title}</h3>
               <p>₹{item.price}</p>
               <p><strong>Quantity:</strong> {item.quantity}</p>
 
-              <div style={{ marginTop: '10px' }}>
-                <button onClick={() => reduceQuantity(item._id)} style={styles.btn}>−</button>
-                <button onClick={() => deleteProduct(item._id)} style={{ ...styles.btn, backgroundColor: '#e74c3c' }}>Delete</button>
+              <div className="cart-buttons">
+                <button onClick={() => reduceQuantity(item._id)}>−</button>
+                <button className="delete" onClick={() => deleteProduct(item._id)}>Delete</button>
               </div>
             </div>
           ))}
@@ -82,37 +75,6 @@ const Cart = () => {
       )}
     </div>
   );
-};
-
-const styles = {
-  cardContainer: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-    gap: '20px',
-    padding: '20px',
-  },
-  card: {
-    border: '1px solid #ccc',
-    borderRadius: '10px',
-    padding: '16px',
-    textAlign: 'center',
-    boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-  },
-  image: {
-    width: '100%',
-    height: '150px',
-    objectFit: 'cover',
-    marginBottom: '10px',
-  },
-  btn: {
-    margin: '5px',
-    padding: '6px 12px',
-    border: 'none',
-    borderRadius: '5px',
-    backgroundColor: '#3498db',
-    color: '#fff',
-    cursor: 'pointer',
-  },
 };
 
 export default Cart;

@@ -1,0 +1,32 @@
+
+.about-page {
+  background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+  min-height: 100vh;
+  font-family: 'Lora', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.about-container {
+  max-width: 800px;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  color: #2f2f2f;
+}
+
+.about-container h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 32px;
+  color: #c44536;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}

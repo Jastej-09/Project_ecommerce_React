@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './AddProducts.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 
 const AddProducts = () => {
 
@@ -18,7 +18,7 @@ const AddProducts = () => {
         axios.post("https://project-ecommerce-react.onrender.com/products/add", formData)
             .then((res) => {
                 console.log(res);
-                navigate("/")
+                navigate("/admin")
             })
             .catch((err) => {
                 console.log(err);
@@ -27,7 +27,7 @@ const AddProducts = () => {
 
     return (
         <div>
-            <div className="head"><h1>Add New Products</h1></div>
+            <div className="headd"><h1>Add New Products</h1></div>
             <div className='formContainer'>
             <form onSubmit={handleSubmit}>
                 <div className="formGroup">

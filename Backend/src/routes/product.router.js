@@ -50,6 +50,7 @@ router.post("/add", upload.single("image"), async (req, res) => {
       await product.save()
 
   res.json({message : "data aaya"})
+  // res.redirect("/store",json({message : "data aaya"}))
 });
 
 router.get("/:id",async (req, res)=>{
